@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seedata"
+version = "1.0.0"
+description = "Seedable fake-data generator for developers: names, emails, addresses, SQL/JSON/CSV output"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "someone-rs" }]
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+seedata = "seedata.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["seedata*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
